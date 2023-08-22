@@ -85,6 +85,13 @@ The previous approach works if a cell text contains white spaces only. To wrap t
 
 Set the [ASPxGridView.SettingsBehavior.AllowEllipsisInText](https://docs.devexpress.com/AspNet/DevExpress.Web.ASPxGridBehaviorSettings.AllowEllipsisInText) property to to `true` to automatically truncate cell texts if they do not fit into the cell width. To indicate that the text is clipped, the control displays an ellipsis (`…`).
 
+```aspx
+<dx:ASPxGridView ID="grid" runat="server" DataSourceID="CustomersDataSource">
+    <SettingsBehavior AllowEllipsisInText="true" />
+    ...
+</dx:ASPxGridView>
+```
+
 ## Files to Review
 
 * [Default.aspx](./CS/Default.aspx) (VB: [Default.aspx](./VB/Default.aspx))
