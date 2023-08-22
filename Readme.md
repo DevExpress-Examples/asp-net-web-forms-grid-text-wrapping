@@ -12,59 +12,63 @@ The suggested techniques are common and may be used not only for [ASPxGridView](
 
 ![Wrapped text](grid-wrap-text.png)
 
-## Turn off text wrapping
+## Disable text wrapping to show text in one line
 
-Disable text wrapping to show text in one line. Set a column's [CellStyle.Wrap](https://docs.devexpress.com/AspNet/DevExpress.Web.AppearanceStyleBase.Wrap) property to `False` for this purpose.
+You can disable text wrapping in the following ways:
 
-```ASPx
-<dx:GridViewDataColumn FieldName="C1" Width="100">  
-    <CellStyle Wrap="False" />
-</dx:GridViewDataColumn> 
-```
+* Set a column's [CellStyle.Wrap](https://docs.devexpress.com/AspNet/DevExpress.Web.AppearanceStyleBase.Wrap) property to `false`.
 
-You can specify the CSS `white-space` property to `nowrap` to get the same result.
+    ```ASPx
+    <dx:GridViewDataColumn FieldName="C1" Width="100">  
+        <CellStyle Wrap="False" />
+    </dx:GridViewDataColumn> 
+    ```
 
-```CSS
-.disableWrapping {  
-    white-space: nowrap;  
-}
-```
-  
-```ASPx
-<dx:GridViewDataColumn FieldName="C2" Width="100">  
-    <CellStyle CssClass="disableWrapping" />
-</dx:GridViewDataColumn>
-```
+* Set the CSS `white-space` property to `nowrap`.
+
+    ```CSS
+    .disableWrapping {  
+        white-space: nowrap;  
+    }
+    ```
+      
+    ```ASPx
+    <dx:GridViewDataColumn FieldName="C2" Width="100">  
+        <CellStyle CssClass="disableWrapping" />
+    </dx:GridViewDataColumn>
+    ```
 
 Note that when text wrapping is disabled, the column's `Width` property in not in effect.
 
-## Enable text wrapping
+## Enable wrapping to have a fixed column width
 
-Enable wrapping for a cell text to have the fixed column width. Set the column's [CellStyle.Wrap](https://docs.devexpress.com/AspNet/DevExpress.Web.AppearanceStyleBase.Wrap) property to `True`.
+You can enable text wrapping in the following ways:
 
-```ASPx
-<dx:GridViewDataColumn FieldName="C3" Width="100">  
-    <CellStyle Wrap="True" />
-</dx:GridViewDataColumn>
-``` 
+* Set the column's [CellStyle.Wrap](https://docs.devexpress.com/AspNet/DevExpress.Web.AppearanceStyleBase.Wrap) property to `true`.
 
-You can specify the CSS `white-space` property to `normal` to get the same result.
+    ```ASPx
+    <dx:GridViewDataColumn FieldName="C3" Width="100">  
+        <CellStyle Wrap="True" />
+    </dx:GridViewDataColumn>
+    ``` 
 
-```CSS
-.enableWrapping {  
-    white-space: normal;  
-}
-```
+* Set the CSS `white-space` property to `normal`.
 
-```ASPx
-<dx:GridViewDataColumn FieldName="C4" Width="100">  
-    <CellStyle CssClass="enableWrapping" />  
-</dx:GridViewDataColumn>  
-```
+    ```CSS
+    .enableWrapping {  
+        white-space: normal;  
+    }
+    ```
+    
+    ```ASPx
+    <dx:GridViewDataColumn FieldName="C4" Width="100">  
+        <CellStyle CssClass="enableWrapping" />  
+    </dx:GridViewDataColumn>  
+    ```
 
 ## Wrap text without white spaces
 
-The previous approach works only if a cell text contains white spaces. To wrap text that does not contain white spaces, use the CSS `word-break` property.
+The previous approach works if a cell text contains white spaces only. To wrap text that does not contain white spaces, use the CSS `word-break` property.
 
 ```CSS
 .wrapEmail {  
@@ -78,8 +82,6 @@ The previous approach works only if a cell text contains white spaces. To wrap t
 ```
 
 ## Show a truncated text
-
-If a grid's column resizing feature is enabled, you can use recommendations from the ASPxGridView - How to display truncated text in a resizable column (using CSS) example. Otherwise, use the approach suggested in the ASPxGridView - How to display a truncated text in a column example. Alternatively, you can use the column's DataItem template to truncate text with CSS when column resizing is disabled:
 
 Set the [ASPxGridView.SettingsBehavior.AllowEllipsisInText](https://docs.devexpress.com/AspNet/DevExpress.Web.ASPxGridBehaviorSettings.AllowEllipsisInText) property to to `true` to automatically truncate cell texts if they do not fit into the cell width. To indicate that the text is clipped, the control displays an ellipsis (`…`).
 
