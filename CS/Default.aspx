@@ -12,17 +12,14 @@
         {
             white-space: nowrap;
         }
-
         .enableWrapping
         {
             white-space: normal;
         }
-
         .wrapEmail
         {
             word-break: break-all;
         }
-
         .truncated
         {
             white-space: nowrap;
@@ -34,25 +31,24 @@
 <body>
     <form id="frmMain" runat="server">
         <dx:ASPxGridView ID="Grid" runat="server" KeyFieldName="ID" OnHtmlDataCellPrepared="Grid_HtmlDataCellPrepared">
-
             <Styles>
                 <Header HorizontalAlign="Center" Font-Bold="true"></Header>
             </Styles>
             <Columns>
                 <dx:GridViewDataColumn FieldName="C1" Width="100" Caption='Wrap="False"'>
-                    <CellStyle Wrap="False"></CellStyle>
+                    <CellStyle Wrap="False" />
                 </dx:GridViewDataColumn>
                 <dx:GridViewDataColumn FieldName="C2" Width="100" Caption='CSS nowrap'>
                     <CellStyle CssClass="disableWrapping"></CellStyle>
                 </dx:GridViewDataColumn>
                 <dx:GridViewDataColumn FieldName="C3" Width="100" Caption='Wrap="True"'>
-                    <CellStyle Wrap="True"></CellStyle>
+                    <CellStyle Wrap="True" />
                 </dx:GridViewDataColumn>
                 <dx:GridViewDataColumn FieldName="C4" Width="100" Caption='CSS normal'>
-                    <CellStyle CssClass="enableWrapping"></CellStyle>
+                    <CellStyle CssClass="enableWrapping" />
                 </dx:GridViewDataColumn>
                 <dx:GridViewDataColumn FieldName="C5" Width="100" Caption='CSS break-all'>
-                    <CellStyle CssClass="wrapEmail"></CellStyle>
+                    <CellStyle CssClass="wrapEmail" />
                 </dx:GridViewDataColumn>
                 <dx:GridViewDataColumn FieldName="C6" Width="100" Caption='Truncated text'>
                     <DataItemTemplate>
@@ -60,7 +56,7 @@
                             <%# Eval("C6") %>
                         </div>
                     </DataItemTemplate>
-                    <CellStyle CssClass="truncated"></CellStyle>
+                    <CellStyle CssClass="truncated" />
                 </dx:GridViewDataColumn>
             </Columns>
         </dx:ASPxGridView>
