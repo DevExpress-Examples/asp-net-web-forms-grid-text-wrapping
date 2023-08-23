@@ -3,7 +3,7 @@
 [![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
 <!-- default badges end -->
 
-# Grid Control for ASP.NET Web Forms - How to set text wrapping in different ways
+# Grid Control for ASP.NET Web Forms - Different options for wrapping text
 <!-- run online -->
 **[[Run Online]](https://codecentral.devexpress.com/t175881/)**
 <!-- run online end -->
