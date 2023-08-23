@@ -8,7 +8,7 @@
 **[[Run Online]](https://codecentral.devexpress.com/t175881/)**
 <!-- run online end -->
 
-The suggested techniques are common and may be used not only for [ASPxGridView](https://docs.devexpress.com/AspNet/DevExpress.Web.ASPxGridView) but for other controls in the same way.
+The suggested techniques are common and may be used not only for [ASPxGridView](https://docs.devexpress.com/AspNet/DevExpress.Web.ASPxGridView), but for other controls also.
 
 ![Wrapped text](grid-wrap-text.png)
 
@@ -40,7 +40,7 @@ You can disable text wrapping in the following ways:
 
 Note that when text wrapping is disabled, the column's `Width` property in not in effect.
 
-## Enable wrapping to have a fixed column width
+## Enable wrapping to set column width
 
 You can enable text wrapping in the following ways:
 
@@ -68,7 +68,7 @@ You can enable text wrapping in the following ways:
 
 ## Wrap text without white spaces
 
-The previous approach works if a cell text contains white spaces only. To wrap text that does not contain white spaces, use the CSS `word-break` property.
+The previous approach works if cell text contains white spaces only. To wrap text that does not contain white spaces, use the CSS `word-break` property.
 
 ```CSS
 .wrapEmail {  
@@ -83,7 +83,7 @@ The previous approach works if a cell text contains white spaces only. To wrap t
 
 ## Show a truncated text
 
-Set the [ASPxGridView.SettingsBehavior.AllowEllipsisInText](https://docs.devexpress.com/AspNet/DevExpress.Web.ASPxGridBehaviorSettings.AllowEllipsisInText) property to to `true` to automatically truncate cell texts if they do not fit into the cell width. To indicate that the text is clipped, the control displays an ellipsis (`…`).
+Set the [ASPxGridView.SettingsBehavior.AllowEllipsisInText](https://docs.devexpress.com/AspNet/DevExpress.Web.ASPxGridBehaviorSettings.AllowEllipsisInText) property to `true` to automatically truncate cell text if it does not fit into the cell's width. To indicate clipped text, the control displays an ellipsis (`…`).
 
 ```aspx
 <dx:ASPxGridView ID="grid" runat="server" DataSourceID="CustomersDataSource">
