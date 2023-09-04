@@ -1,6 +1,6 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="_Default" %>
 
-<%@ Register Assembly="DevExpress.Web.v14.1, Version=14.1.15.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a"
+<%@ Register Assembly="DevExpress.Web.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a"
     Namespace="DevExpress.Web" TagPrefix="dx" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -20,12 +20,6 @@
         {
             word-break: break-all;
         }
-        .truncated
-        {
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
     </style>
 </head>
 <body>
@@ -39,7 +33,7 @@
                     <CellStyle Wrap="False" />
                 </dx:GridViewDataColumn>
                 <dx:GridViewDataColumn FieldName="C2" Width="100" Caption='CSS nowrap'>
-                    <CellStyle CssClass="disableWrapping"></CellStyle>
+                    <CellStyle CssClass="disableWrapping" />
                 </dx:GridViewDataColumn>
                 <dx:GridViewDataColumn FieldName="C3" Width="100" Caption='Wrap="True"'>
                     <CellStyle Wrap="True" />
@@ -51,12 +45,7 @@
                     <CellStyle CssClass="wrapEmail" />
                 </dx:GridViewDataColumn>
                 <dx:GridViewDataColumn FieldName="C6" Width="100" Caption='Truncated text'>
-                    <DataItemTemplate>
-                        <div class="truncated" style="width: 100px">
-                            <%# Eval("C6") %>
-                        </div>
-                    </DataItemTemplate>
-                    <CellStyle CssClass="truncated" />
+                    <Settings AllowEllipsisInText="true" />
                 </dx:GridViewDataColumn>
             </Columns>
         </dx:ASPxGridView>
