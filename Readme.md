@@ -11,7 +11,7 @@
 <!-- default file list end -->
 # ASPxGridView - How to set text wrapping in different ways
 <!-- run online -->
-**[[Run Online]](https://codecentral.devexpress.com/t175881/)**
+**[[Run Online]](https://codecentral.devexpress.com/128535450/)**
 <!-- run online end -->
 
 
