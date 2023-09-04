@@ -20,9 +20,9 @@ You can disable text wrapping in the following ways:
 * Set a column's [CellStyle.Wrap](https://docs.devexpress.com/AspNet/DevExpress.Web.AppearanceStyleBase.Wrap) property to `false`.
 
     ```ASPx
-    <dx:GridViewDataColumn FieldName="C1" Width="100">  
+    <dx:GridViewDataColumn FieldName="C1" Width="100" Caption='Wrap="False"'>
         <CellStyle Wrap="False" />
-    </dx:GridViewDataColumn> 
+    </dx:GridViewDataColumn>
     ```
 
 * Set the CSS `white-space` property to `nowrap`.
@@ -34,7 +34,7 @@ You can disable text wrapping in the following ways:
     ```
       
     ```ASPx
-    <dx:GridViewDataColumn FieldName="C2" Width="100">  
+    <dx:GridViewDataColumn FieldName="C2" Width="100" Caption='CSS nowrap'>
         <CellStyle CssClass="disableWrapping" />
     </dx:GridViewDataColumn>
     ```
@@ -48,7 +48,7 @@ You can enable text wrapping in the following ways:
 * Set the column's [CellStyle.Wrap](https://docs.devexpress.com/AspNet/DevExpress.Web.AppearanceStyleBase.Wrap) property to `true`.
 
     ```ASPx
-    <dx:GridViewDataColumn FieldName="C3" Width="100">  
+    <dx:GridViewDataColumn FieldName="C3" Width="100" Caption='Wrap="True"'>
         <CellStyle Wrap="True" />
     </dx:GridViewDataColumn>
     ``` 
@@ -62,9 +62,9 @@ You can enable text wrapping in the following ways:
     ```
     
     ```ASPx
-    <dx:GridViewDataColumn FieldName="C4" Width="100">  
-        <CellStyle CssClass="enableWrapping" />  
-    </dx:GridViewDataColumn>  
+    <dx:GridViewDataColumn FieldName="C4" Width="100" Caption='CSS normal'>
+        <CellStyle CssClass="enableWrapping" />
+    </dx:GridViewDataColumn>
     ```
 
 ## Wrap text without white spaces
@@ -77,20 +77,19 @@ The previous approach works if cell text contains white spaces only. To wrap tex
 }
 ``` 
 ```ASPx
-<dx:GridViewDataColumn FieldName="C5" Width="100">  
+<dx:GridViewDataColumn FieldName="C5" Width="100" Caption='CSS break-all'>
     <CellStyle CssClass="wrapEmail" />
-</dx:GridViewDataColumn>  
+</dx:GridViewDataColumn>
 ```
 
 ## Show a truncated text
 
-Set the [ASPxGridView.SettingsBehavior.AllowEllipsisInText](https://docs.devexpress.com/AspNet/DevExpress.Web.ASPxGridBehaviorSettings.AllowEllipsisInText) property to `true` to automatically truncate cell text if it does not fit into the cell's width. To indicate clipped text, the control displays an ellipsis (`…`).
+Set the [GridDataColumnSettings.AllowEllipsisInText](https://docs.devexpress.com/AspNet/DevExpress.Web.GridDataColumnSettings.AllowEllipsisInText) property to `true` to automatically truncate cell text if it does not fit into the cell's width. To indicate clipped text, the control displays an ellipsis (`…`).
 
 ```aspx
-<dx:ASPxGridView ID="grid" runat="server" DataSourceID="CustomersDataSource">
-    <SettingsBehavior AllowEllipsisInText="true" />
-    ...
-</dx:ASPxGridView>
+<dx:GridViewDataColumn FieldName="C6" Width="100" Caption='Truncated text'>
+    <Settings AllowEllipsisInText="true" />
+</dx:GridViewDataColumn>
 ```
 
 ## Files to Review
