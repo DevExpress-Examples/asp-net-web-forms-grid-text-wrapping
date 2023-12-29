@@ -5,9 +5,6 @@
 <!-- default badges end -->
 
 # Grid Control for ASP.NET Web Forms - Different options for wrapping text
-<!-- run online -->
-**[[Run Online]](https://codecentral.devexpress.com/128535450/)**
-<!-- run online end -->
 
 The suggested techniques are common and may be used not only for [ASPxGridView](https://docs.devexpress.com/AspNet/DevExpress.Web.ASPxGridView), but for other controls also.
 
