@@ -23,7 +23,7 @@ Partial Public Class _Default
 					.C6 = "This is a long long simple text " & i.ToString()
 				}).ToList()
 			End If
-			Return CType(Session(key), List(Of GridDataItem))
+			Return DirectCast(Session(key), List(Of GridDataItem))
 		End Get
 	End Property
 	Protected Sub Page_Load(ByVal sender As Object, ByVal e As EventArgs)
